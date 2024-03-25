@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--此文件相当于之前Dao的实现类Impl省去了 JDBC 代码以及设置参数和获取结果集的代码-->
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.bnzr.dao.UserDao">
+    <!--查询语句
+    <select id="{方法名（如JDBC中，Dao接口实现类的方法名，实现namespace绑定接口的那个方法）}" resultType="{返回类型的范型}">
+    -->
+    <select id="getUserList" resultType="com.bnzr.pojo.User">
+        select * from `user`
+    </select>
+</mapper>
